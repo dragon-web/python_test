@@ -45,4 +45,65 @@ import requests
 # thislist[0] = "你好"
 # print(thislist)
 # thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
-# print(thislist[2:5])
+# print(thislist[-1:-4]) #这个例子说明 只能前向不能反向 想要从后往前遍历就不行
+# print(len(thislist))
+# thislist = ["apple", "banana", "cherry"]
+# thislist.insert(1, "orange")
+# print(thislist[-1])
+# for x in thislist:
+#     print(x)
+
+# thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+# print(thislist[-2:-5])
+# thistuple = ('test0','test1','test2','test3')
+# thistuple[0] = 'aaa'
+# print(thistuple)
+
+# thisset = {"apple", "banana", "cherry"}
+# print(type(thisset))
+# print(thisset)
+# print(thisset[0])
+
+thisdict =	{
+  "brand": "Porsche",
+  "brand": "122",
+  "model": "911",
+  "year": 1963,
+  "sah" :  ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+}
+# print(thisdict)
+# print(thisdict["brand"])
+# print(len(thisdict))
+# for x in thisdict:
+#   print(thisdict[x])
+# for x ,y in thisdict.items():
+#     print(x,y)
+
+# adj = ["red", "big", "tasty"]
+# fruits = ["apple", "banana", "cherry"]
+#
+# for x in adj:
+#   for y in fruits:
+#     print(x, y)
+# def my_function(fname):
+#   print(fname + " Gates")
+#
+# my_function("Rory John")
+# my_function("Jennifer Katharine")
+# my_function("Phoebe Adele")
+
+# def my_function(food):
+#   for x in food:
+#     print(x)
+#
+# fruits = ["apple", "banana", "cherry"]
+#
+# my_function(fruits)
+
+def myfunction(number):
+    number = 10
+    print(number)
+
+num = 100
+myfunction(num)
+print(num)
