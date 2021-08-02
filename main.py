@@ -99,11 +99,71 @@ thisdict =	{
 # fruits = ["apple", "banana", "cherry"]
 #
 # my_function(fruits)
+# def myfunction(number):
+#     number = 10
+#     print(number)
+#
+# num = 100
+# myfunction(num)
+# print(num)
+#
+# def myfunction(number):
+#     print('this is a function    ' + str(number))
+#
+# myfunction(5)
+# def pass_value(number):
+#     number = 10
+#     return number
+#
+# test_number = 100
+#
+# test_number = pass_value(test_number)
+#
+# print(test_number)
 
-def myfunction(number):
-    number = 10
-    print(number)
+# def pass_value(number):
+#     number[0] = 1
+#
+# test_num = 10
+# packet = [test_num]
+# pass_value(packet)
+#
+# print(packet[0])
 
-num = 100
-myfunction(num)
-print(num)
+# def myfunc(count = "count"):
+#     print(count)
+# myfunc(1)
+# def my_function(*kids):
+#   print("The youngest child is " + kids[2])
+#
+# my_function("Phoebe", "Jennifer", "Rory")
+
+# def swap(num1,num2):
+#     num3 = num2
+#     num2 = num1
+#     num1 = num3
+#
+# count1 = 1
+# count2 = 2
+# swap(count1,count2)
+# print(count1,count2)
+
+# def fib(n):
+#         if (n <= 1):
+#             return n
+#         else:
+#             return fib(n-1) + fib(n-2)
+# print(fib(3))
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+# 使用 Person 来创建对象，然后执行 printname 方法：
+
+x = Person("Bill", "Gates")
+x.printname()
