@@ -154,16 +154,117 @@ thisdict =	{
 #         else:
 #             return fib(n-1) + fib(n-2)
 # print(fib(3))
+#
+# class Person:
+#   def __init__(self, fname, lname):
+#     self.firstname = fname
+#     self.lastname = lname
+#
+#   def printname(self):
+#     print(self.firstname, self.lastname)
+#
+# # 使用 Person 来创建对象，然后执行 printname 方法：
+#
+# x = Person("Bill", "Gates")
+# x.printname()
+# from flask import Flask,render_template,request,redirect
+# app = Flask(__name__)
+# @app.route('/login',methods=['GET','POST'])
+# def index():
+#     if(request.method == 'GET'):
+#         return render_template('login.html')
+#     user = request.form.get('user')   #表单里面那数据
+#     pwd = request.form.get('pwd')   #表单里面那数据
+#     if user == 'alex' and pwd == '123':
+#         pass
+#     else:
+#         return render_template('login.html',msg = '用户名或密码错误')
+#    # request.args   从url中拿数据  get传来的值
+# if __name__ == '__main__':
+#     app.debug = True # 设置调试模式，生产模式的时候要关掉debug
+#     app.run()
 
-class Person:
-  def __init__(self, fname, lname):
-    self.firstname = fname
-    self.lastname = lname
+# def func(): #外部函数
+#     a = 1
+#     print('this is func')
+#     def func1(num):  #内部函数
+#         print('this is func1')
+#         print(a + num)
+#     return func1
+# var = func()
+# var(3)
 
-  def printname(self):
-    print(self.firstname, self.lastname)
+# mylist = [1,2,3,4,5]
+#
+# def func(obj):
+#     print('func:', obj)
+#     def func1():
+#         obj[0] += 10
+#         print ('func1:',obj)
+#     return func1
+#
+# var = func(mylist)
+# var()
+# var()
 
-# 使用 Person 来创建对象，然后执行 printname 方法：
+# @func1
+# def func(func): #外部闭包函数的参数
+#     print('装饰器')
+#
+# def myprint():
+#     print('myprint')
 
-x = Person("Bill", "Gates")
-x.printname()
+def a_new_decorator(a_func):
+    def wrapTheFunction():
+        print("I am doing some boring work before executing a_func()")
+
+        a_func()
+
+        print("I am doing some boring work after executing a_func()")
+
+    return wrapTheFunction
+
+
+def a_function_requiring_decoration():
+    print("I am the function which needs some decoration to remove my foul smell")
+
+
+a_function_requiring_decoration()
+# outputs: "I am the function which needs some decoration to remove my foul smell"
+
+a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)
+# now a_function_requiring_decoration is wrapped by wrapTheFunction()
+
+a_function_requiring_decoration()
+# outputs:I am doing some boring work before executing a_func()
+#        I am the function which needs some decoration to remove my foul smell
+#        I am doing some boring work after executing a_func()
+
+@a_new_decorator
+def a_function_requiring_decoration():
+    """Hey you! Decorate me!"""
+    print("I am the function which needs some decoration to "
+          "remove my foul smell")
+
+
+a_function_requiring_decoration()
+# outputs: I am doing some boring work before executing a_func()
+#         I am the function which needs some decoration to remove my foul smell
+#         I am doing some boring work after executing a_func()
+
+# the @a_new_decorator is just a short way of saying:
+a_function_requiring_decoration = a_new_decorator(a_function_requiring_decoration)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
